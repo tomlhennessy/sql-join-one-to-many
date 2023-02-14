@@ -4,7 +4,11 @@ Now, it's time to practice querying related data in one-to-many relationships.
 
 ## Getting started
 
-Download the starter. `cd` into the __sql-practice__ folder.
+* Download the starter.
+* Run `npm install`
+* Run all the tests with `npm test`
+
+`cd` into the __sql-practice__ folder.
 
 Run SQLite on a database called __practice.db__.
 
@@ -12,7 +16,7 @@ In this practice, you will use these example table to make your queries:
 
 ![bands-albums-db-schema]
 
-Seed data has been provided for each table as follows: 
+Seed data has been provided for each table as follows:
 
 Table `bands`:
 
@@ -44,32 +48,45 @@ Table `albums`:
 
 ### Create table
 
-Run the following SQLite command to create the `bands` and `albums` tables, and 
+Run the following SQLite command to create the `bands` and `albums` tables, and
 insert the rows shown above.
 
 ```sql
 .read seed-data.sql
 ```
 
-> Remember: You can re-run this read command anytime you want to restore the 
+> Remember: You can re-run this read command anytime you want to restore the
 > data you have deleted.
 
-For the following steps, you should execute the SQL command in the SQLite3 CLI,
-but you can create and use a `.sql` file to to formulate the command.
+For the following steps, you should formulate the SQL commands in the
+`step-1.sql` and `step-2.sql` files then run the test specs using `npm test`.
 
 ## Step 1: `SELECT` the result of a joined table
 
-Run the SQL command that joins the `bands` and `albums` tables together, 
-`SELECT`ing both the name of the band and the album title.
+Formulate the SQL command that joins the `bands` and `albums` tables together,
+`SELECT`ing both the name of the band and the album title in the
+__sql-practice/step-1.sql__ file.
+
+Run the test specs in __test/step-1-spec.js__ file by running:
+
+```shell
+npm test test/step-1-spec.js
+```
 
 ## Step 2: Filter a query across a joined table
 
-Run the SQL command that selects the name of each band that has an album with 
-fewer than `20,000` sales.
+Formulate the SQL command that selects the name of each band that has an album
+with fewer than `20,000` sales in the __sql-practice/step-2.sql__ file.
+
+Run the test specs in __test/step-2-spec.js__ file by running:
+
+```shell
+npm test test/step-2-spec.js
+```
 
 ## Congratulations!
 
-You are now able to query and filter a query across tables in a one-to-many 
+You are now able to query and filter a query across tables in a one-to-many
 relationship!
 
 
